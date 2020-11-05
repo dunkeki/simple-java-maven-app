@@ -13,11 +13,6 @@ pipeline {
             }
         }
         stage('Info') { 
-            agent {
-                docker {
-                    image 'docker:dind'
-                }
-            }
             steps {
                 sh 'docker info'
             }
