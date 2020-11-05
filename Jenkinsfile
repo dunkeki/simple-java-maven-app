@@ -17,6 +17,7 @@ pipeline {
                 docker {
                     image 'docker:dind'
                 }
+            }
             steps {
                 sh 'docker info'
             }
