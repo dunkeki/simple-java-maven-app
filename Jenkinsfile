@@ -11,6 +11,11 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+    }
+    agent {
+        docker {
+            image 'docker:dind'
+        }
         stage('Info') { 
             steps {
                 sh 'docker info'
